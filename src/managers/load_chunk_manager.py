@@ -42,7 +42,7 @@ class LoadingChunkingManager:
         
         return data
     
-    def create_embedding_and_chunk(self, data):
+    def create_chunks(self, data):
         """
         Create text chunks from the loaded data.
 

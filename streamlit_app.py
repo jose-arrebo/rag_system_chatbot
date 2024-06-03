@@ -32,7 +32,7 @@ if "initialized" not in st.session_state:
     st.session_state.llm_manager = LLMManager()
     
     data = st.session_state.lang_chain_manager.load_pdf(file_path)
-    chunks = st.session_state.lang_chain_manager.create_embedding_and_chunk(data)
+    chunks = st.session_state.lang_chain_manager.create_chunks(data)
     vector_db = st.session_state.chroma_db_manager.add_vector_to_db(chunks)
     
     llm_llama2 = st.session_state.llm_manager.load_llama2()
